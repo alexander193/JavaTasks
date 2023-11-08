@@ -1,7 +1,7 @@
 /*
 * Напишите метод для поиска самой длинной строки в массиве.
 * Напишите метод, который проверяет является ли слово палиндромом.
-* Напишите метод, заменяющий в тексте все вхождения слова «бля» на «[блин]».
+* Напишите метод, заменяющий в тексте все вхождения слова «блин» на «[цензура]».
 * Имеются две строки. Напишите метод, возвращающий количество вхождений одной строки в другую.
 */
 
@@ -12,8 +12,8 @@ public class taskString {
         String[] array = {"a", "as", "aasdasdsd", "asdf", "asdfg"};
         System.out.println(searchTheLongest(array));
         System.out.println(isPalindrome("ШаЛаш"));
-        System.out.println(wordReplacer("сука бля"));
-        System.out.println(checkRepeats("привет сука привет", "привет"));
+        System.out.println(wordReplacer("блин, хватит"));
+        System.out.println(checkRepeats("привет привет", "привет"));
     }
 
     public static String searchTheLongest(String[] in) {
@@ -38,10 +38,10 @@ public class taskString {
         StringBuilder out = new StringBuilder();
         while (true){
             int prevPosition = position;
-            position = in.toLowerCase().indexOf("бля", position);
+            position = in.toLowerCase().indexOf("блин", position);
             if (position != -1) {
-                out.append(in, prevPosition, position).append("блин");
-                position += 3;
+                out.append(in, prevPosition, position).append("[цензура]");
+                position += 4;
             } else {
                 out.append(in, prevPosition, in.length());
                 break;
