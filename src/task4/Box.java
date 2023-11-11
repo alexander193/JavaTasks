@@ -1,5 +1,10 @@
 package task4;
 
-public class Box extends Shape {
+import java.util.ArrayList;
 
+public class Box extends Shape {
+    private ArrayList<Shape> shapes = new ArrayList<>();
+    public Box() {
+
+    }
 }
