@@ -9,6 +9,12 @@ package task4;
 
 public class task4 {
     public static void main(String[] args) {
+        Box box = new Box(100.0);
 
+        Ball ball = new Ball(2.0);
+        System.out.println(ball.getVolume());
+
+        System.out.println(box.add(ball));
+        System.out.println(box.getCurrentVolume());
     }
 }
