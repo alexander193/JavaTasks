@@ -1,6 +1,6 @@
-package task4;
+package task4_1;
 
-public class SolidOfRevolution extends Shape {
+abstract class SolidOfRevolution extends Shape {
     double radius;
 
     public SolidOfRevolution(double volume, double radius) {
@@ -8,7 +8,4 @@ public class SolidOfRevolution extends Shape {
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return radius;
-    }
 }

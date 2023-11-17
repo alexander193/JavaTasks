@@ -1,20 +1,23 @@
 /*
 * 4.0) Реализовать иерархию классов, описывающую трёхмерные фигуры
-* 4.1) Сделать некоторые классы абстрактными.
+*
 * 4.2) Реализовать с использованием интерфейсов. Дополнительно: реализовать интерфейс Comparable.
 * 4.3) Добавьте в иерархию классов фигуру вращения для произвольной функции.
 */
 
-package task4;
+package task4_0;
 
-public class task4 {
+public class task4_0 {
     public static void main(String[] args) {
-        Box box = new Box(100.0);
+        Box box = new Box(200.0);
 
-        Ball ball = new Ball(2.0);
-        System.out.println(ball.getVolume());
-
-        System.out.println(box.add(ball));
+        System.out.println(box.add(new Ball(2.5)));
+        System.out.println(box.getCurrentVolume());
+        System.out.println(box.add(new Pyramid(5,5)));
+        System.out.println(box.getCurrentVolume());
+        Cylinder cylinder = new Cylinder(4, 5);
+        System.out.println("cylinder.volume = " + cylinder.volume);
+        System.out.println(box.add(cylinder));
         System.out.println(box.getCurrentVolume());
     }
 }
