@@ -3,7 +3,7 @@ package task4_1;
 import java.util.ArrayList;
 
 public class Box extends Shape {
-    public ArrayList<Shape> shapes = new ArrayList<>();
+    ArrayList<Shape> shapes = new ArrayList<>();
 
     public double getCurrentVolume() {
         return currentVolume;
@@ -14,7 +14,7 @@ public class Box extends Shape {
         super(volume);
     }
 
-    public boolean add(Shape shape) {
+    boolean add(Shape shape) {
         if (shape.volume + currentVolume < this.volume) {
             shapes.add(shape);
             currentVolume += shape.volume;

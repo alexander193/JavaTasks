@@ -10,7 +10,7 @@ public class Box implements Shape {
 
     private final double volume;
     private double currentVolume = 0;
-    public TreeSet<Shape> shapes = new TreeSet<>();
+    TreeSet<Shape> shapes = new TreeSet<>();
 
     public double getCurrentVolume() {
         return currentVolume;
@@ -21,7 +21,7 @@ public class Box implements Shape {
         this.volume = volume;
     }
 
-    public boolean add(Shape shape) {
+    boolean add(Shape shape) {
         if (shape.getVolume() + currentVolume < this.getVolume()) {
             shapes.add(shape);
             currentVolume += shape.getVolume();
