@@ -12,6 +12,7 @@ public class task5 {
             hashMap.put((char)i, 0);
         hashMap.put('ё', 0);
     }
+    //
     public static void main(String[] args) {
         check("абв");
         for (Map.Entry<Character, Integer> entry : hashMap.entrySet())
