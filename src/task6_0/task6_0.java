@@ -1,6 +1,6 @@
-package task6;
+package task6_0;
 
-public class task6 {
+public class task6_0 {
     public static void main(String[] args) {
         double celsiusValue = 20;
         System.out.println(new CelsiusConverter().convert(celsiusValue));
